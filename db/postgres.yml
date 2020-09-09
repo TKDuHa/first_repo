@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+   postgresdb:
+      image: postgres
+      restart: always
+      environment:
+         POSTGRES_USER: superuser
+         POSTGRES_PASSWORD: db_PW-safe42
+      volumes:
+         - postgresdb_vol:/var/lib/postgresql/data
+      ports:
+         -  5432:5432
+
+volumes:
+   postgresdb_vol:
