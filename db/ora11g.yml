@@ -1,8 +1,40 @@
 version: '3'
 
 services: 
-  oracle-db:
+  oracle-db_1:
     image: oracleinanutshell/oracle-xe-11g:latest
     ports:
       - 1524:1521
-      - 5500:5500
+  
+  oracle-db_2:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    ports:
+      - 1525:1521
+  
+  oracle-db_3:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    ports:
+      - 1526:1521
+  
+  oracle-db_4:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    ports:
+      - 1527:1521
+  
+  oracle-db_5:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    ports:
+      - 1528:1521
+  
+  oracle-db_6:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    ports:
+      - 1529:1521
+  
+  oracle-db_7:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    ports:
+      - 1530:1521
+  
+  
+  
