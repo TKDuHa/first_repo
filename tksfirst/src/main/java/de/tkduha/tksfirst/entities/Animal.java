@@ -24,16 +24,19 @@ public class Animal {
 	
 	@NotNull
 	private int age;
+	
+	private String parent;
 
 	public Animal() {
 
 	}
 
-	public Animal(Integer id, String race, String name, Integer age) {
+	public Animal(Integer id, String race, String name, Integer age, String parent) {
 		this.race = race;
 		this.name = name;
 		this.age = age;
 		this.setId(id);
+		this.parent = parent;
 	}
 
 	public String getRace() {
@@ -66,6 +69,14 @@ public class Animal {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getParent() {
+		return parent;
+	}
+
+	public void setParent(String parent) {
+		this.parent = parent;
 	}
 
 }
