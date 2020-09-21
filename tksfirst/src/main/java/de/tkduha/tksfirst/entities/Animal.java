@@ -5,8 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 
 @Entity
@@ -16,13 +14,11 @@ public class Animal {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-	@NotBlank
+
 	private String race;
 	
 	private String name;
-	
-	@NotNull
+
 	private Integer age;
 	
 	private String parent;
