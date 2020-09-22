@@ -12,7 +12,7 @@
 	<groupId>de.tkduha</groupId>
 	<artifactId>tksfirst</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>tksfirst</name>
+	<name>springboot_animal_example</name>
 	<description>Erstes Projekt mit Spring Boot</description>
 
 	<properties>

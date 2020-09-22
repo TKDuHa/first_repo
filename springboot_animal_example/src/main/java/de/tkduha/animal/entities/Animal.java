@@ -1,4 +1,4 @@
-package de.tkduha.tksfirst.entities;
+package de.tkduha.animal.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
