@@ -1,0 +1,25 @@
+span {
+  font-weight: bold;
+  background: lightgray;
+  padding: 0.3em 0.8em;
+  cursor: pointer;
+}
+
+.play-container {
+  padding: 3em;
+  border: 1px solid rgb(111, 0, 255);
+  margin-bottom: 1em;
+  input {
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+}
+
+.greatcounter {
+  background-color: skyblue;
+  border: 1px solid black;
+}
+
+.lesscounter {
+  background-color: lightgray;
+}
