@@ -6,9 +6,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 @Entity
 @Table(name = "animals")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Animal {
 
 	@Id
@@ -22,57 +31,4 @@ public class Animal {
 	private Integer age;
 	
 	private String parent;
-
-	public Animal() {
-
-	}
-
-	public Animal(Integer id, String race, String name, Integer age, String parent) {
-		this.race = race;
-		this.name = name;
-		this.age = age;
-		this.setId(id);
-		this.parent = parent;
-	}
-
-	public String getRace() {
-		return race;
-	}
-
-	public void setRace(String race) {
-		this.race = race;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getParent() {
-		return parent;
-	}
-
-	public void setParent(String parent) {
-		this.parent = parent;
-	}
-
 }

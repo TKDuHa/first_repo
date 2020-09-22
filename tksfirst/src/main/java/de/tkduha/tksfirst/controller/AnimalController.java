@@ -10,23 +10,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import de.tkduha.tksfirst.entities.Animal;
 import de.tkduha.tksfirst.repositories.AnimalRepository;
 
 @RestController
+@RequestMapping("/animal")
 public class AnimalController {
 	
 	@Autowired
 	AnimalRepository animalRepository;
 	
-	@GetMapping("/animal")
+	@GetMapping
 	public List<Animal> getAllAnimals() {
 		return animalRepository.findAllByOrderByIdAsc();
 	}
 	
-	@PostMapping("/animal")
+	@PostMapping
 	public ResponseEntity<Animal> addAnimal(@RequestBody Animal animal) {
 		if(animalRepository.existsById(animal.getId())) {
 			return new ResponseEntity<Animal>(animalRepository.findById(animal.getId()).get(), HttpStatus.METHOD_NOT_ALLOWED);
@@ -35,7 +37,7 @@ public class AnimalController {
 		return new ResponseEntity<Animal>(animal, HttpStatus.CREATED);
 	}
 	
-	@PutMapping("/animal")
+	@PutMapping
 	public ResponseEntity<Animal> modifyAnimal(@RequestBody Animal animal) {
 		if(!animalRepository.existsById(animal.getId())) {
 			return new ResponseEntity<Animal>(animal, HttpStatus.NOT_FOUND);
@@ -44,7 +46,7 @@ public class AnimalController {
 		return new ResponseEntity<Animal>(animal, HttpStatus.OK);
 	}
 	
-	@DeleteMapping("/animal")
+	@DeleteMapping
 	public ResponseEntity<Animal> deleteAnimal(@RequestBody Animal animal) {
 		if(!animalRepository.existsById(animal.getId())) {
 			return new ResponseEntity<Animal>(animal, HttpStatus.NOT_FOUND);
