@@ -6,18 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 
 @Entity
 @Table(name = "animals")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 public class Animal {
 
 	@Id
@@ -31,4 +25,6 @@ public class Animal {
 	private Integer age;
 	
 	private String parent;
+	
+	private String color;
 }
