@@ -1,0 +1,43 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    background: rgb(111, 0, 255);
+    color: white;
+    padding: 1em;
+    margin-right: 10px;
+    width: 200px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 0;
+      flex-grow: 1;
+      font-size: 0.9rem;
+    }
+
+    p.name {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    p.race {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.play-container {
+  padding: 1em;
+  border: 1px solid rgb(111, 0, 255);
+
+  input {
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+}

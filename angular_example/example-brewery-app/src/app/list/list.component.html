@@ -1,1 +1,49 @@
-<p>list works!</p>
+<h1>Animals in the Zoo</h1>
+
+<div class="play-container">
+  <ul *ngIf="animals">
+    <li *ngFor="let animal of animals">
+      <p class="name">{{ animal.name }}</p>
+      <p class="race">{{ animal.race }}</p>
+      <p class="age">Age: {{ animal.age }}</p>
+      <p class="parent">Parent: {{ animal.parent || "Orphan" }}</p>
+    </li>
+  </ul>
+</div>
+
+<h1>Adding an Animal</h1>
+
+<div class="play-container">
+  <table>
+    <tr>
+      <td><label for="name">Name</label></td>
+      <td><input type="text" [(ngModel)]="name" /></td>
+    </tr>
+
+    <tr>
+      <td><label for="race">Race</label></td>
+      <td><input type="text" [(ngModel)]="race" /></td>
+    </tr>
+
+    <tr>
+      <td><label for="age">Age</label></td>
+      <td><input type="text" [(ngModel)]="age" /></td>
+    </tr>
+
+    <tr>
+      <td><label for="parent">Parent</label></td>
+      <td><input type="text" [(ngModel)]="parent" /></td>
+    </tr>
+  </table>
+  <ul>
+    <li>
+      <p class="name">{{ name || "Unnamed" }}</p>
+      <p class="race">{{ race || "Unspecified" }}</p>
+      <p class="age">Age: {{ age || 0 }}</p>
+      <p class="parent">Parent: {{ parent || "Orphan" }}</p>
+    </li>
+  </ul>
+  <p>
+    <button class="button" type="submit" (click)="addAnimal()">Add</button>
+  </p>
+</div>

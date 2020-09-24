@@ -5,16 +5,6 @@ span {
   cursor: pointer;
 }
 
-.play-container {
-  padding: 3em;
-  border: 1px solid rgb(111, 0, 255);
-  margin-bottom: 1em;
-  input {
-    padding: 1em;
-    margin-bottom: 2em;
-  }
-}
-
 .greatcounter {
   background-color: skyblue;
   border: 1px solid black;
@@ -22,4 +12,14 @@ span {
 
 .lesscounter {
   background-color: lightgray;
+}
+
+.play-container {
+  padding: 1em;
+  border: 1px solid rgb(111, 0, 255);
+  margin-bottom: 1em;
+  input {
+    padding: 1em;
+    margin-bottom: 2em;
+  }
 }
